@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interactif</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- Écran d'accueil -->
+        <div id="start-screen">
+            <h1>Quiz Interactif</h1>
+            <button id="start-btn" onclick="startQuiz();">Commencer le Quiz</button>
+            <p id="alertHome"></p>
+            <select name="level" id="levelQuiz">
+                <option value="">niveaux de difficulté</option>
+                <option value="easy">facile</option>
+                <option value="average">moyen</option>
+                <option value="difficult">difficile</option>
+            </select>
+
+        </div>
+
+        <!-- Conteneur du quiz -->
+        <div id="quiz-container" class="hidden">
+            <div id="startQuizTime">
+                <p>Le jeux débute dans : <span id="timerStart"></span></p>
+            </div>
+            <p id="levelDifficult"></p>
+            <div id="question-container">
+                <h2 id="question-text"></h2>
+            </div>
+            <input type="text" id="answerQuestion" placeholder="Entrez votre réponse ici">
+            <button onclick="submitAnswer()">Soumettre la réponse</button>
+            <div id="answer-buttons" class="btn-container"></div>
+            <div id="progress">
+                <span id="score"></span>
+                <span id="timer"></span>
+            </div>
+        </div>
+
+        <!-- Écran de fin de jeu -->
+        <div id="end-screen" class="hidden">
+            <h2>Quiz terminé !</h2>
+            <p id="final-score"></p>
+            <button id="restart-btn">Rejouer</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+<script src="/src/javascript/index.js"></script>
+
+</html>
